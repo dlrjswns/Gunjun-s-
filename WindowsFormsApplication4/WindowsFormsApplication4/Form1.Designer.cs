@@ -33,6 +33,7 @@
             this.State = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Sleep = new System.Windows.Forms.Button();
+            this.Hunt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             this.Eat.Name = "Eat";
             this.Eat.Size = new System.Drawing.Size(75, 23);
             this.Eat.TabIndex = 0;
-            this.Eat.Text = "Eat";
+            this.Eat.Text = "먹기";
             this.Eat.UseVisualStyleBackColor = true;
             this.Eat.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -52,7 +53,7 @@
             this.Play.Name = "Play";
             this.Play.Size = new System.Drawing.Size(75, 23);
             this.Play.TabIndex = 2;
-            this.Play.Text = "Play";
+            this.Play.Text = "놀아주기";
             this.Play.UseVisualStyleBackColor = true;
             this.Play.Click += new System.EventHandler(this.Play_Click);
             // 
@@ -81,15 +82,26 @@
             this.Sleep.Name = "Sleep";
             this.Sleep.Size = new System.Drawing.Size(75, 23);
             this.Sleep.TabIndex = 5;
-            this.Sleep.Text = "Sleep";
+            this.Sleep.Text = "자기";
             this.Sleep.UseVisualStyleBackColor = true;
             this.Sleep.Click += new System.EventHandler(this.Sleep_Click);
+            // 
+            // Hunt
+            // 
+            this.Hunt.Location = new System.Drawing.Point(278, 243);
+            this.Hunt.Name = "Hunt";
+            this.Hunt.Size = new System.Drawing.Size(183, 28);
+            this.Hunt.TabIndex = 6;
+            this.Hunt.Text = "사냥하기";
+            this.Hunt.UseVisualStyleBackColor = true;
+            this.Hunt.Click += new System.EventHandler(this.Hunt_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 368);
+            this.Controls.Add(this.Hunt);
             this.Controls.Add(this.Sleep);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.State);
@@ -109,6 +121,7 @@
         private System.Windows.Forms.Label State;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Sleep;
+        private System.Windows.Forms.Button Hunt;
     }
 }
 

@@ -17,6 +17,8 @@ namespace WindowsFormsApplication4
         int EatCount = 0;
         int SleepCount = 0;
         int PlayCount = 0;
+
+        Form2 HuntScreen = new Form2();
         public Form1()
         {
             InitializeComponent();
@@ -161,6 +163,11 @@ namespace WindowsFormsApplication4
                 State.Text = "주인님 이제 이건 재미없어요.. 색다른거 없나요...♥";
 
             EatCount = 0;//Play버튼을 눌렀을때 EatCount를 0으로 초기화시킨다
+        }
+
+        private void Hunt_Click(object sender, EventArgs e)
+        {
+            HuntScreen.ShowDialog();
         }
     }
 }
