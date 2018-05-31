@@ -59,6 +59,7 @@
             // 
             // State
             // 
+            this.State.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.State.Location = new System.Drawing.Point(12, 9);
             this.State.Name = "State";
             this.State.Size = new System.Drawing.Size(260, 190);
@@ -68,6 +69,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(278, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(183, 228);
