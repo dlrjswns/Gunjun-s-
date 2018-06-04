@@ -19,6 +19,7 @@ namespace WindowsFormsApplication4
         int PlayCount = 0;
 
         Form2 HuntScreen = new Form2();
+        Form3 where = new Form3();
         public Form1()
         {
             InitializeComponent();
@@ -224,7 +225,8 @@ private void pictureBox1_Click(object sender, EventArgs e)
 
         private void Hunt_Click(object sender, EventArgs e)
         {
-            HuntScreen.ShowDialog();
+
+            where.ShowDialog();
         }
 
         private void chu3D_Click(object sender, EventArgs e)

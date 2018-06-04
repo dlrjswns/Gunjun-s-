@@ -39,7 +39,7 @@
             // 
             // Eat
             // 
-            this.Eat.Location = new System.Drawing.Point(13, 214);
+            this.Eat.Location = new System.Drawing.Point(12, 243);
             this.Eat.Name = "Eat";
             this.Eat.Size = new System.Drawing.Size(75, 23);
             this.Eat.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             // Play
             // 
-            this.Play.Location = new System.Drawing.Point(197, 214);
+            this.Play.Location = new System.Drawing.Point(197, 243);
             this.Play.Name = "Play";
             this.Play.Size = new System.Drawing.Size(75, 23);
             this.Play.TabIndex = 2;
@@ -62,7 +62,7 @@
             this.State.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.State.Location = new System.Drawing.Point(12, 9);
             this.State.Name = "State";
-            this.State.Size = new System.Drawing.Size(260, 190);
+            this.State.Size = new System.Drawing.Size(260, 228);
             this.State.TabIndex = 3;
             this.State.Text = "State";
             this.State.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -72,7 +72,7 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(278, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(183, 228);
+            this.pictureBox1.Size = new System.Drawing.Size(220, 223);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -80,7 +80,7 @@
             // 
             // Sleep
             // 
-            this.Sleep.Location = new System.Drawing.Point(107, 214);
+            this.Sleep.Location = new System.Drawing.Point(107, 243);
             this.Sleep.Name = "Sleep";
             this.Sleep.Size = new System.Drawing.Size(75, 23);
             this.Sleep.TabIndex = 5;
@@ -90,9 +90,9 @@
             // 
             // Hunt
             // 
-            this.Hunt.Location = new System.Drawing.Point(278, 243);
+            this.Hunt.Location = new System.Drawing.Point(278, 238);
             this.Hunt.Name = "Hunt";
-            this.Hunt.Size = new System.Drawing.Size(183, 28);
+            this.Hunt.Size = new System.Drawing.Size(220, 28);
             this.Hunt.TabIndex = 6;
             this.Hunt.Text = "사냥하기";
             this.Hunt.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 368);
+            this.ClientSize = new System.Drawing.Size(510, 368);
             this.Controls.Add(this.Hunt);
             this.Controls.Add(this.Sleep);
             this.Controls.Add(this.pictureBox1);

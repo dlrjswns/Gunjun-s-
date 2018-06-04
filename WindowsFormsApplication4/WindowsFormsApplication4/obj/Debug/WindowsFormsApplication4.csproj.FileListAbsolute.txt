@@ -17,3 +17,5 @@ C:\Users\user\Documents\GitHub\Gunjun-s-\WindowsFormsApplication4\WindowsFormsAp
 C:\Users\user\Documents\GitHub\Gunjun-s-\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Properties.Resources.resources
 C:\Users\user\Documents\GitHub\Gunjun-s-\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csproj.GenerateResource.Cache
 C:\Users\user\Documents\GitHub\Gunjun-s-\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form2.resources
+C:\Users\user\Documents\GitHub\Gunjun-s-\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form3.resources
+C:\Users\user\Documents\GitHub\Gunjun-s-\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form4.resources

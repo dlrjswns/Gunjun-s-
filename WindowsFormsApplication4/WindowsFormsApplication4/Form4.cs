@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication4
 {
-    public partial class Form2 : Form
+    public partial class Form4 : Form
     {
-        public Form2()
+        public Form4()
         {
             InitializeComponent();
         }
@@ -22,15 +22,15 @@ namespace WindowsFormsApplication4
         Bitmap bit3;
         protected override void OnLoad(EventArgs e)
         {
-            bit = new Bitmap("chu13.gif");
+            bit = new Bitmap("거북왕1.gif");
             ImageAnimator.Animate(bit, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit1 = new Bitmap("윈디1.gif");
+            bit1 = new Bitmap("chu13.gif");
             ImageAnimator.Animate(bit1, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit2 = new Bitmap("윈디.gif");
+            bit2 = new Bitmap("거북왕.gif");
             ImageAnimator.Animate(bit1, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
@@ -42,12 +42,12 @@ namespace WindowsFormsApplication4
         {
             ImageAnimator.UpdateFrames();
             Graphics g = pictureBox2.CreateGraphics();
-            g.DrawImage(this.bit, new Point(0, 0));
+            g.DrawImage(this.bit, new Point(-70, 0));
             base.OnPaint(e);
 
             ImageAnimator.UpdateFrames();
             Graphics h = pictureBox3.CreateGraphics();
-            h.DrawImage(this.bit1, new Point(-70, 0));
+            h.DrawImage(this.bit1, new Point(0, 0));
             base.OnPaint(e);
 
             ImageAnimator.UpdateFrames();
@@ -57,60 +57,15 @@ namespace WindowsFormsApplication4
 
             ImageAnimator.UpdateFrames();
             Graphics y = pictureBox1.CreateGraphics();
-            y.DrawImage(this.bit3, new Point(-50, 0));
+            y.DrawImage(this.bit3, new Point(0, 0));
             base.OnPaint(e);
         }
         private void OnFrameChanged(object sender, EventArgs e)
         {
             this.Invalidate();
         }
-       
-  
-        //protected override void OnLoad(EventArgs e)
-        //{
-        //    bit1 = new Bitmap("sleep.gif");
-        //    ImageAnimator.Animate(bit1, new EventHandler(this.OnFrameChanged1));
-        //    base.OnLoad(e);
-        //}
-        //protected override void OnPaint(PaintEventArgs e)
-        //{
-        //    ImageAnimator.UpdateFrames();
-        //    Graphics g = pictureBox1.CreateGraphics();
-        //    g.DrawImage(this.bit1, new Point(0, 0));
-        //    base.OnPaint(e);
-        //}
-        private void OnFrameChanged1(object sender, EventArgs e)
-        {
-            this.Invalidate();
-        }
-
-
-        private void HuntScreen1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chu3D_Click(object sender, EventArgs e)
-        {
-            
-    }
 
         private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-        public void bodyhit()
-        {
-
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
