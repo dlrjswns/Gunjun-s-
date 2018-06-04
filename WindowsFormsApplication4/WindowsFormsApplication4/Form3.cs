@@ -14,6 +14,9 @@ namespace WindowsFormsApplication4
     {
         Form2 HuntScreen = new Form2();
         Form4 waterscreen = new Form4();
+        Form5 glassscreen = new Form5();
+        Form6 cloudscreen = new Form6();
+        Form7 skyscreen = new Form7();
         public Form3()
         {
             InitializeComponent();
@@ -34,5 +37,27 @@ namespace WindowsFormsApplication4
         {
             waterscreen.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            glassscreen.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            cloudscreen.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            skyscreen.ShowDialog();
+        }
+       
+
     }
 }

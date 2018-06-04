@@ -81,6 +81,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "날카로운 잎사귀";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -91,6 +92,7 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "뭉게뭉게 구름동산";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -101,6 +103,7 @@
             this.button5.TabIndex = 5;
             this.button5.Text = "차오르는 용암동굴";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -111,6 +114,7 @@
             this.button6.TabIndex = 6;
             this.button6.Text = "천공의 신전";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form3
             // 
@@ -125,7 +129,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form3";
             this.Text = "Form3";
             this.ResumeLayout(false);

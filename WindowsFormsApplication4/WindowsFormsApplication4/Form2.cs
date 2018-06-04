@@ -12,6 +12,8 @@ namespace WindowsFormsApplication4
 {
     public partial class Form2 : Form
     {
+        bool change = true;
+        int number=0;
         public Form2()
         {
             InitializeComponent();
@@ -20,6 +22,9 @@ namespace WindowsFormsApplication4
         Bitmap bit1;
         Bitmap bit2;
         Bitmap bit3;
+        Bitmap bit4;
+        Bitmap bit5;
+        Bitmap bit6;
         protected override void OnLoad(EventArgs e)
         {
             bit = new Bitmap("chu13.gif");
@@ -37,17 +42,29 @@ namespace WindowsFormsApplication4
             bit3 = new Bitmap("chu1.gif");
             ImageAnimator.Animate(bit3, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
+
+            bit4 = new Bitmap("chu5.gif");
+            ImageAnimator.Animate(bit4, new EventHandler(this.OnFrameChanged));
+            base.OnLoad(e);
+
+            bit5 = new Bitmap("chu3.gif");
+            ImageAnimator.Animate(bit5, new EventHandler(this.OnFrameChanged));
+            base.OnLoad(e);
+
+            bit6 = new Bitmap("chu4.gif");
+            ImageAnimator.Animate(bit6, new EventHandler(this.OnFrameChanged));
+            base.OnLoad(e);
         }
         protected override void OnPaint(PaintEventArgs e)
         {
             ImageAnimator.UpdateFrames();
-            Graphics g = pictureBox2.CreateGraphics();
-            g.DrawImage(this.bit, new Point(0, 0));
+            Graphics g = pictureBox3.CreateGraphics();
+            g.DrawImage(this.bit, new Point(15, 10));
             base.OnPaint(e);
 
             ImageAnimator.UpdateFrames();
-            Graphics h = pictureBox3.CreateGraphics();
-            h.DrawImage(this.bit1, new Point(-70, 0));
+            Graphics h = pictureBox2.CreateGraphics();
+            h.DrawImage(this.bit1, new Point(0, 0));
             base.OnPaint(e);
 
             ImageAnimator.UpdateFrames();
@@ -55,10 +72,35 @@ namespace WindowsFormsApplication4
             t.DrawImage(this.bit2, new Point(0, 0));
             base.OnPaint(e);
 
-            ImageAnimator.UpdateFrames();
+            
+
             Graphics y = pictureBox1.CreateGraphics();
-            y.DrawImage(this.bit3, new Point(-50, 0));
-            base.OnPaint(e);
+            if (number==0)
+            {
+                ImageAnimator.UpdateFrames();
+                y.DrawImage(this.bit3, new Point(-50, 0));
+                base.OnPaint(e);
+            }
+            else if(number==1)
+            {
+                ImageAnimator.UpdateFrames();
+                y.DrawImage(this.bit4, new Point(0, 0));
+                base.OnPaint(e);
+            }
+            else if (number == 2)
+            {
+                ImageAnimator.UpdateFrames();
+                y.DrawImage(this.bit5, new Point(0, 0));
+                base.OnPaint(e);
+            }
+            else
+            {
+                ImageAnimator.UpdateFrames();
+                y.DrawImage(this.bit6, new Point(0, 0));
+                base.OnPaint(e);
+            }
+           
+
         }
         private void OnFrameChanged(object sender, EventArgs e)
         {
@@ -102,7 +144,7 @@ namespace WindowsFormsApplication4
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            number = 1;
         }
         public void bodyhit()
         {
@@ -113,6 +155,16 @@ namespace WindowsFormsApplication4
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            number = 2;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            number = 3;
         }
     }
 }
