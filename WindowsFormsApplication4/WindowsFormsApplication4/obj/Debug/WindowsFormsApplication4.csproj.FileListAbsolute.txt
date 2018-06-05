@@ -22,3 +22,4 @@ C:\Users\user\Documents\GitHub\Gunjun-s-\WindowsFormsApplication4\WindowsFormsAp
 C:\Users\user\Documents\GitHub\Gunjun-s-\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form5.resources
 C:\Users\user\Documents\GitHub\Gunjun-s-\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form6.resources
 C:\Users\user\Documents\GitHub\Gunjun-s-\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form7.resources
+C:\Users\user\Documents\GitHub\Gunjun-s-\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form8.resources

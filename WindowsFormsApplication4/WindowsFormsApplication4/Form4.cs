@@ -16,6 +16,17 @@ namespace WindowsFormsApplication4
         public Form4()
         {
             InitializeComponent();
+            progressBar1.Value = 100;
+            progressBar2.Value = 100;
+        }
+        public void Init()//progressbar 맥시멈과 미니멈을 정해주어 넘치지 않도록
+        {
+            progressBar1.Style = ProgressBarStyle.Continuous;
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = 100;
+            
+            progressBar1.Value = 0;
+
         }
         Bitmap bit;//gif 출력 코딩퍼옴 https://m.blog.naver.com/PostView.nhn?blogId=goldrushing&logNo=130184365511&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F
         Bitmap bit1;
@@ -38,7 +49,7 @@ namespace WindowsFormsApplication4
             base.OnLoad(e);
 
             bit2 = new Bitmap("거북왕.gif");
-            ImageAnimator.Animate(bit1, new EventHandler(this.OnFrameChanged));
+            ImageAnimator.Animate(bit2, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
             bit3 = new Bitmap("chu1.gif");
@@ -155,16 +166,25 @@ namespace WindowsFormsApplication4
         private void button1_Click(object sender, EventArgs e)
         {
             number = 1;
+            progressBar1.Step = -10;
+            progressBar1.PerformStep();
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             number = 2;
+            progressBar1.Step = -5;
+            progressBar1.PerformStep();
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             number = 3;
+            progressBar1.Step = -20;
+            progressBar1.PerformStep();
+           
         }
     }
 }

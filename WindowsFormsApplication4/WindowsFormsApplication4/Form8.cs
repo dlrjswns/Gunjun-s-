@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication4
 {
-    public partial class Form7 : Form
-    {
+    public partial class Form8 : Form
+    {       
         int number = 0;
-        public Form7()
+        public Form8()
         {
             InitializeComponent();
             progressBar1.Value = 100;
@@ -24,7 +24,7 @@ namespace WindowsFormsApplication4
             progressBar1.Style = ProgressBarStyle.Continuous;
             progressBar1.Minimum = 0;
             progressBar1.Maximum = 100;
-            
+
             progressBar1.Value = 0;
 
         }
@@ -40,15 +40,15 @@ namespace WindowsFormsApplication4
         Bitmap bit9;
         protected override void OnLoad(EventArgs e)
         {
-            bit = new Bitmap("루기아.gif");
+            bit = new Bitmap("chu13.gif");
             ImageAnimator.Animate(bit, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit1 = new Bitmap("chu13.gif");
+            bit1 = new Bitmap("앤테이.gif");
             ImageAnimator.Animate(bit1, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit2 = new Bitmap("루기아1.gif");
+            bit2 = new Bitmap("앤테이1.png");
             ImageAnimator.Animate(bit2, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
@@ -68,121 +68,154 @@ namespace WindowsFormsApplication4
             ImageAnimator.Animate(bit6, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit7 = new Bitmap("파괴광선.gif");
+            bit7 = new Bitmap("성스러운불꽃.gif");
             ImageAnimator.Animate(bit7, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit8 = new Bitmap("워터로블라스트.gif");
+            bit8 = new Bitmap("분연.gif");
             ImageAnimator.Animate(bit8, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit9 = new Bitmap("폭포오르기.gif");
+            bit9 = new Bitmap("파괴광선1.gif");
             ImageAnimator.Animate(bit9, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
         }
         protected override void OnPaint(PaintEventArgs e)
-        {         
+        {
             ImageAnimator.UpdateFrames();
-            Graphics h = pictureBox3.CreateGraphics();
-            h.DrawImage(this.bit1, new Point(15, 10));
+            Graphics g = pictureBox3.CreateGraphics();
+            g.DrawImage(this.bit, new Point(15, 10));//chu 13
             base.OnPaint(e);
+
+
 
             ImageAnimator.UpdateFrames();
             Graphics t = pictureBox4.CreateGraphics();
-            t.DrawImage(this.bit2, new Point(-20, 0));
+            t.DrawImage(this.bit2, new Point(0, 0));//앤테이 1
             base.OnPaint(e);
+
+
 
             Graphics y = pictureBox1.CreateGraphics();
             if (number == 0)
             {
                 ImageAnimator.UpdateFrames();
-                y.DrawImage(this.bit3, new Point(-50, 0));
+                y.DrawImage(this.bit3, new Point(-50, 0));//chu 1
                 base.OnPaint(e);
             }
             else if (number == 1)
             {
                 ImageAnimator.UpdateFrames();
-                y.DrawImage(this.bit4, new Point(0, 0));
+                y.DrawImage(this.bit4, new Point(0, 0));//chu 5
                 base.OnPaint(e);
+
+
             }
             else if (number == 2)
             {
                 ImageAnimator.UpdateFrames();
-                y.DrawImage(this.bit5, new Point(0, 0));
+                y.DrawImage(this.bit5, new Point(0, 0));//chu 3
                 base.OnPaint(e);
             }
             else
             {
                 ImageAnimator.UpdateFrames();
-                y.DrawImage(this.bit6, new Point(0, 0));
+                y.DrawImage(this.bit6, new Point(0, 0));//chu 4
                 base.OnPaint(e);
             }
-            Graphics g = pictureBox2.CreateGraphics();
+
+            Graphics h = pictureBox2.CreateGraphics();
             if (number == 0)
             {
                 ImageAnimator.UpdateFrames();
-                g.DrawImage(this.bit, new Point(-50, 10));
+                h.DrawImage(this.bit1, new Point(0, 0));//앤테이
                 base.OnPaint(e);
             }
             else if (number == 1)
             {
                 ImageAnimator.UpdateFrames();
-                g.DrawImage(this.bit7, new Point(-50, 0));
+                h.DrawImage(this.bit7, new Point(0, 0));//성스러운불꽃
                 base.OnPaint(e);
             }
             else if (number == 2)
             {
                 ImageAnimator.UpdateFrames();
-                g.DrawImage(this.bit8, new Point(-50, 0));
+                h.DrawImage(this.bit8, new Point(0, 0));//분연
                 base.OnPaint(e);
             }
             else
             {
                 ImageAnimator.UpdateFrames();
-                g.DrawImage(this.bit9, new Point(-50, 0));
+                h.DrawImage(this.bit9, new Point(0, 0));//파괴광선1
                 base.OnPaint(e);
             }
+
+
+
         }
         private void OnFrameChanged(object sender, EventArgs e)
         {
             this.Invalidate();
         }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            
-        }
+        //protected override void OnLoad(EventArgs e)
+        //{
+        //    bit1 = new Bitmap("sleep.gif");
+        //    ImageAnimator.Animate(bit1, new EventHandler(this.OnFrameChanged1));
+        //    base.OnLoad(e);
+        //}
+        //protected override void OnPaint(PaintEventArgs e)
+        //{
+        //    ImageAnimator.UpdateFrames();
+        //    Graphics g = pictureBox1.CreateGraphics();
+        //    g.DrawImage(this.bit1, new Point(0, 0));
+        //    base.OnPaint(e);
+        //}
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            number = 1;
-            progressBar1.Step = -10;
-            progressBar1.PerformStep();
-            
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            number = 2;
-            progressBar1.Step = -5;
-            progressBar1.PerformStep();
-           
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            number = 3;
-            progressBar1.Step = -20;
-            progressBar1.PerformStep();
-        }
+    
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
+
+     
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+   
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            number = 1;
+            progressBar1.Step = -10;
+            progressBar1.PerformStep();
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            number = 2;
+            progressBar1.Step = -5;
+            progressBar1.PerformStep();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            number = 3;
+            progressBar1.Step = -20;
+            progressBar1.PerformStep();
+
+        }
     }
 }
+

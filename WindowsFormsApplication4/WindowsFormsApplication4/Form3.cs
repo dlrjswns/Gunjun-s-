@@ -17,6 +17,7 @@ namespace WindowsFormsApplication4
         Form5 glassscreen = new Form5();
         Form6 cloudscreen = new Form6();
         Form7 skyscreen = new Form7();
+        Form8 firescreen = new Form8();
         public Form3()
         {
             InitializeComponent();
@@ -50,7 +51,7 @@ namespace WindowsFormsApplication4
 
         private void button5_Click(object sender, EventArgs e)
         {
-           
+            firescreen.ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)

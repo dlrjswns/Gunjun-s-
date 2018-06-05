@@ -17,6 +17,17 @@ namespace WindowsFormsApplication4
         public Form6()
         {
             InitializeComponent();
+            progressBar1.Value = 100;
+            progressBar2.Value = 100;
+        }
+        public void Init()//progressbar 맥시멈과 미니멈을 정해주어 넘치지 않도록
+        {
+            progressBar1.Style = ProgressBarStyle.Continuous;
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = 100;
+            
+            progressBar1.Value = 0;
+
         }
         Bitmap bit;//gif 출력 코딩퍼옴 https://m.blog.naver.com/PostView.nhn?blogId=goldrushing&logNo=130184365511&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F
         Bitmap bit1;
@@ -25,6 +36,9 @@ namespace WindowsFormsApplication4
         Bitmap bit4;
         Bitmap bit5;
         Bitmap bit6;
+        Bitmap bit7;
+        Bitmap bit8;
+        Bitmap bit9;
         protected override void OnLoad(EventArgs e)
         {
             bit = new Bitmap("리자몽 1.gif");
@@ -36,7 +50,7 @@ namespace WindowsFormsApplication4
             base.OnLoad(e);
 
             bit2 = new Bitmap("리자몽.gif");
-            ImageAnimator.Animate(bit1, new EventHandler(this.OnFrameChanged));
+            ImageAnimator.Animate(bit2, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
             bit3 = new Bitmap("chu1.gif");
@@ -54,14 +68,21 @@ namespace WindowsFormsApplication4
             bit6 = new Bitmap("chu4.gif");
             ImageAnimator.Animate(bit6, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
+
+            bit7 = new Bitmap("에어 슬래시.gif");
+            ImageAnimator.Animate(bit7, new EventHandler(this.OnFrameChanged));
+            base.OnLoad(e);
+
+            bit8 = new Bitmap("화염방사.gif");
+            ImageAnimator.Animate(bit8, new EventHandler(this.OnFrameChanged));
+            base.OnLoad(e);
+
+            bit9 = new Bitmap("화염소용돌이.gif");
+            ImageAnimator.Animate(bit9, new EventHandler(this.OnFrameChanged));
+            base.OnLoad(e);
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-            ImageAnimator.UpdateFrames();
-            Graphics g = pictureBox2.CreateGraphics();
-            g.DrawImage(this.bit, new Point(0, 0));
-            base.OnPaint(e);
-
             ImageAnimator.UpdateFrames();
             Graphics h = pictureBox3.CreateGraphics();
             h.DrawImage(this.bit1, new Point(15, 10));
@@ -97,6 +118,30 @@ namespace WindowsFormsApplication4
                 y.DrawImage(this.bit6, new Point(0, 0));
                 base.OnPaint(e);
             }
+            Graphics g = pictureBox2.CreateGraphics();
+            if (number == 0) { 
+            ImageAnimator.UpdateFrames();
+            g.DrawImage(this.bit, new Point(0, 0));//리자몽 1
+            base.OnPaint(e);
+        }
+            else if (number == 1)
+            {
+                ImageAnimator.UpdateFrames();
+                g.DrawImage(this.bit7, new Point(0, 0));
+                base.OnPaint(e);
+            }
+            else if (number == 2)
+            {
+                ImageAnimator.UpdateFrames();
+                g.DrawImage(this.bit8, new Point(0, 0));
+                base.OnPaint(e);
+            }
+            else
+            {
+                ImageAnimator.UpdateFrames();
+                g.DrawImage(this.bit9, new Point(0, 0));
+                base.OnPaint(e);
+            }
         }
         private void OnFrameChanged(object sender, EventArgs e)
         {
@@ -115,16 +160,25 @@ namespace WindowsFormsApplication4
         private void button1_Click(object sender, EventArgs e)
         {
             number = 1;
+            progressBar1.Step = -10;
+            progressBar1.PerformStep();
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             number = 2;
+            progressBar1.Step = -5;
+            progressBar1.PerformStep();
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             number = 3;
+            progressBar1.Step = -20;
+            progressBar1.PerformStep();
+           
         }
     }
 }
