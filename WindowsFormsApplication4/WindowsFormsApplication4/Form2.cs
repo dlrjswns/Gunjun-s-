@@ -16,12 +16,15 @@ namespace WindowsFormsApplication4
 
         int i = 10;
         int number=0;
+        int skillcount1 = 0;
+        int skillcount2 = 0;
+        int skillcount3 = 0;
         
         public Form2()
         {
             InitializeComponent();
-            progressBar1.Value = 100;
-            progressBar2.Value = 100;
+            progressBar1.Value = 100;//초기 윈디 체력바 100
+            progressBar2.Value = 100;//초기 피카츄 체력바 100
 
         }
         public void Init()//progressbar 맥시멈과 미니멈을 정해주어 넘치지 않도록
@@ -87,14 +90,14 @@ namespace WindowsFormsApplication4
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-            ImageAnimator.UpdateFrames();
+            ImageAnimator.UpdateFrames();//초기 picturebox3에 뜨는 이미지
             Graphics g = pictureBox3.CreateGraphics();
             g.DrawImage(this.bit, new Point(15, 10));
             base.OnPaint(e);
 
            
 
-            ImageAnimator.UpdateFrames();
+            ImageAnimator.UpdateFrames();//초기 picturebox4에 뜨는 이미지
             Graphics t = pictureBox4.CreateGraphics();
             t.DrawImage(this.bit2, new Point(0, 0));
             base.OnPaint(e);
@@ -102,13 +105,13 @@ namespace WindowsFormsApplication4
             
 
             Graphics y = pictureBox1.CreateGraphics();
-            if (number==0)
+            if (number==0)//초기 picturebox1에 뜨는 이미지
             {
                 ImageAnimator.UpdateFrames();
                 y.DrawImage(this.bit3, new Point(-50, 0));
                 base.OnPaint(e);
             }
-            else if(number==1)
+            else if(number==1)//피카츄 아이언테일 스킬 쓴 이 후 picturebox1 이미지
             {
                 ImageAnimator.UpdateFrames();
                 y.DrawImage(this.bit4, new Point(0, 0));
@@ -116,13 +119,13 @@ namespace WindowsFormsApplication4
                 
                 
             }
-            else if (number == 2)
+            else if (number == 2)//피카츄 전광석화 스킬 쓴 이 후 picturebox1 이미지
             {
                 ImageAnimator.UpdateFrames();
                 y.DrawImage(this.bit5, new Point(0, 0));
                 base.OnPaint(e);
             }
-            else
+            else//피카츄 백만볼트 스킬 쓴 이 후 picturebox1 이미지
             {
                 ImageAnimator.UpdateFrames();
                 y.DrawImage(this.bit6, new Point(0, 0));
@@ -199,9 +202,39 @@ namespace WindowsFormsApplication4
         private void button1_Click(object sender, EventArgs e)
         {
             number = 1;
-            progressBar1.Step = -10;
-            progressBar1.PerformStep();
+            skillcount2 = 0;
+            skillcount3 = 0;
+            button2.Enabled = true;
+            button3.Enabled = true;
+            timer1.Enabled = true;
            
+            if (skillcount1 == 0)
+            {
+                State.Text = "피카츄 아이언테일 !!... 효과가 굉장했다 !";               
+                progressBar1.Step = -10;//윈디 체력바 다는 정도
+                progressBar1.PerformStep();
+            }
+            else if (skillcount1 == 1)
+            {
+                State.Text = "피카츄 아이언테일 !!... 효과가 굉장했다 !";
+                progressBar1.Step = -10;//윈디 체력바 다는 정도
+                progressBar1.PerformStep();
+            }
+            else if(skillcount1 == 2)
+            {
+                State.Text = "피카츄 아이언테일 !!... 효과가 별로였다 ,,,";
+                progressBar1.Step = -5;//윈디 체력바 다는 정도
+                progressBar1.PerformStep();
+
+            }
+            else
+            {
+                State.Text = "피카츄 아이언테일 !!... 효과가 별로였다 ,,,";
+                progressBar1.Step = -5;//윈디 체력바 다는 정도
+                progressBar1.PerformStep();
+                button1.Enabled = false;
+            }
+            skillcount1++;
         }
         public void bodyhit()
         {
@@ -217,21 +250,75 @@ namespace WindowsFormsApplication4
         private void button2_Click(object sender, EventArgs e)
         {
             number = 2;
-            progressBar1.Step = -5;
-            progressBar1.PerformStep();
-           
+            skillcount1 = 0;
+            skillcount3 = 0;
+            button1.Enabled = true;
+            button3.Enabled = true;
+            timer1.Enabled = true;
+
+            if (skillcount2 == 0)//피카츄 전광석화 1번 사용시
+            {
+                State.Text = "피카츄 전광석화 !!... 효과가 굉장했다 !";
+                progressBar1.Step = -10;
+                progressBar1.PerformStep();
+            }
+            else if (skillcount2 == 1)//피카츄 전광석화 2번 사용시
+            {
+                State.Text = "피카츄 전광석화 !!... 효과가 별로였다 ,,,";
+                progressBar1.Step = -5;
+                progressBar1.PerformStep();
+            }
+            else if (skillcount2 == 2)//피카츄 전광석화 3번 사용시
+            {
+                State.Text = "피카츄 전광석화 !!... 효과가 별로였다 ,,,";
+                progressBar1.Step = -5;
+                progressBar1.PerformStep();
+
+            }
+            else if (skillcount2 == 3)//피카츄 전광석화 4번 사용시
+            {
+                State.Text = "피카츄 전광석화 !!... 효과가 별로였다 ,,,";
+                progressBar1.Step = -5;
+                progressBar1.PerformStep();
+            }
+            else
+            {
+                State.Text = "피카츄 전광석화 !!... 효과가 별로였다 ,,,";
+                progressBar1.Step = -5;
+                progressBar1.PerformStep();
+                button2.Enabled = false;//피카츄 전광석화 5번 이상 사용시 버튼 작동금지
+            }
+            skillcount2++;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             number = 3;
-            progressBar1.Step = -20;
-            progressBar1.PerformStep();
-           
-        }
+            skillcount1 = 0;
+            skillcount2 = 0;
+            button1.Enabled = true;
+            button2.Enabled = true;
+            timer1.Enabled = true;
+            if (skillcount3 == 0)
+            {
+                State.Text = "피카츄 백만볼트 !!... 효과가 굉장했다 !";
+                progressBar1.Step = -20;
+                progressBar1.PerformStep();
+            }
+            else if (skillcount3 == 1)
+            {
+                State.Text = "피카츄 백만볼트 !!... 효과가 별로였다 ,,,";
+                progressBar1.Step = -10;
+                progressBar1.PerformStep();
+            }
+            else 
+            {
+                button3.Enabled = false;
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
+            }
+          
+            skillcount3++;
 
         }
 
@@ -239,5 +326,40 @@ namespace WindowsFormsApplication4
         {
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (number == 0)
+            {
+                State.Text = "크르르르르르르";
+                timer1.Enabled = false;
+            }
+            else if (number == 1)
+            {
+                
+                State.Text = "윈디가 <불대문자>를 사용했다!!... ";
+                progressBar2.Step = -10;
+                progressBar2.PerformStep();
+                timer1.Enabled = false;
+            }
+            else if (number == 2)
+            {
+                
+                State.Text = "윈디가 <불꽃세례>를 사용했다!!...";
+                progressBar2.Step = -10;
+                progressBar2.PerformStep();
+
+                timer1.Enabled = false;
+            }
+            else
+            {
+                State.Text = "윈디가 <돌진>을 사용했다!!...";
+                progressBar2.Step = -10;
+                progressBar2.PerformStep();
+                timer1.Enabled = false;
+            }
+        }
+
+      
     }
 }
