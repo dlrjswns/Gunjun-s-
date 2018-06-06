@@ -362,6 +362,10 @@ namespace WindowsFormsApplication4
                 progressBar2.Step = -10;
                 progressBar2.PerformStep();
             }
+            if (progressBar1.Value == 0)
+            {
+                State.Text = "전설의 포켓몬 앤테이가 쓰러졌습니다!!";
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)

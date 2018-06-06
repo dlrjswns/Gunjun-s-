@@ -45,6 +45,8 @@ namespace WindowsFormsApplication4
             // PictureBox에 이미지 출력
             pictureBox5.Image = tgt;
 
+          
+
         }
         public void Init()//progressbar 맥시멈과 미니멈을 정해주어 넘치지 않도록
         {
@@ -371,8 +373,16 @@ namespace WindowsFormsApplication4
                 progressBar2.PerformStep();
                 timer1.Enabled = false;
             }
+            if (progressBar1.Value == 0)
+            {
+                State.Text = "야생의 윈디가 쓰러졌습니다!!";
+            }
+           
         }
 
-      
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

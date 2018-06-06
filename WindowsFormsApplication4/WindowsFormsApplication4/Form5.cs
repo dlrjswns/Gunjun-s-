@@ -329,6 +329,10 @@ namespace WindowsFormsApplication4
                 progressBar2.Step = -10;//이상해씨 이판사판 사용 시 피카츄 체력바 다는 정도
                 progressBar2.PerformStep();
             }
+            if (progressBar1.Value == 0)
+            {
+                State.Text = "야생의 이상해씨가 쓰러졌습니다!!";
+            }
         }
     }
 }

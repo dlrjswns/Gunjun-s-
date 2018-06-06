@@ -321,6 +321,10 @@ namespace WindowsFormsApplication4
                 progressBar2.Step = -10;//리자몽 화염소용돌이 사용 시 피카츄 체력바 다는 정도
                 progressBar2.PerformStep();
             }
+            if (progressBar1.Value == 0)
+            {
+                State.Text = "야생의 리자몽이 쓰러졌습니다!!";
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
