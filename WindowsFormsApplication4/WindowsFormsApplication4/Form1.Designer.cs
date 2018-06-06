@@ -34,33 +34,41 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Sleep = new System.Windows.Forms.Button();
             this.Hunt = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Eat
             // 
-            this.Eat.Location = new System.Drawing.Point(12, 243);
+            this.Eat.BackColor = System.Drawing.SystemColors.Window;
+            this.Eat.Font = new System.Drawing.Font("HY수평선B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Eat.Location = new System.Drawing.Point(12, 276);
             this.Eat.Name = "Eat";
-            this.Eat.Size = new System.Drawing.Size(75, 23);
+            this.Eat.Size = new System.Drawing.Size(84, 80);
             this.Eat.TabIndex = 0;
             this.Eat.Text = "먹기";
-            this.Eat.UseVisualStyleBackColor = true;
+            this.Eat.UseVisualStyleBackColor = false;
             this.Eat.Click += new System.EventHandler(this.button1_Click);
             // 
             // Play
             // 
-            this.Play.Location = new System.Drawing.Point(197, 243);
+            this.Play.BackColor = System.Drawing.SystemColors.Window;
+            this.Play.Font = new System.Drawing.Font("HY수평선B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Play.Location = new System.Drawing.Point(189, 276);
             this.Play.Name = "Play";
-            this.Play.Size = new System.Drawing.Size(75, 23);
+            this.Play.Size = new System.Drawing.Size(83, 80);
             this.Play.TabIndex = 2;
             this.Play.Text = "놀아주기";
-            this.Play.UseVisualStyleBackColor = true;
+            this.Play.UseVisualStyleBackColor = false;
             this.Play.Click += new System.EventHandler(this.Play_Click);
             // 
             // State
             // 
             this.State.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.State.Location = new System.Drawing.Point(12, 9);
+            this.State.Location = new System.Drawing.Point(12, 42);
             this.State.Name = "State";
             this.State.Size = new System.Drawing.Size(260, 228);
             this.State.TabIndex = 3;
@@ -70,7 +78,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(278, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(278, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(220, 223);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -80,38 +88,66 @@
             // 
             // Sleep
             // 
-            this.Sleep.Location = new System.Drawing.Point(107, 243);
+            this.Sleep.BackColor = System.Drawing.SystemColors.Window;
+            this.Sleep.Font = new System.Drawing.Font("HY수평선B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Sleep.Location = new System.Drawing.Point(102, 276);
             this.Sleep.Name = "Sleep";
-            this.Sleep.Size = new System.Drawing.Size(75, 23);
+            this.Sleep.Size = new System.Drawing.Size(81, 80);
             this.Sleep.TabIndex = 5;
             this.Sleep.Text = "자기";
-            this.Sleep.UseVisualStyleBackColor = true;
+            this.Sleep.UseVisualStyleBackColor = false;
             this.Sleep.Click += new System.EventHandler(this.Sleep_Click);
             // 
             // Hunt
             // 
-            this.Hunt.Location = new System.Drawing.Point(278, 238);
+            this.Hunt.BackColor = System.Drawing.SystemColors.Menu;
+            this.Hunt.Font = new System.Drawing.Font("HY수평선B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Hunt.Location = new System.Drawing.Point(278, 271);
             this.Hunt.Name = "Hunt";
             this.Hunt.Size = new System.Drawing.Size(220, 28);
             this.Hunt.TabIndex = 6;
             this.Hunt.Text = "사냥하기";
-            this.Hunt.UseVisualStyleBackColor = true;
+            this.Hunt.UseVisualStyleBackColor = false;
             this.Hunt.Click += new System.EventHandler(this.Hunt_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(511, 35);
+            this.panel1.TabIndex = 7;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(44, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(144, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(510, 368);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Hunt);
             this.Controls.Add(this.Sleep);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.State);
             this.Controls.Add(this.Play);
             this.Controls.Add(this.Eat);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -124,6 +160,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Sleep;
         private System.Windows.Forms.Button Hunt;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

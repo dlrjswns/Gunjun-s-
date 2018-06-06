@@ -21,6 +21,25 @@ namespace WindowsFormsApplication4
             InitializeComponent();
             progressBar1.Value = 100;//거북왕 초기 체력바 100
             progressBar2.Value = 100;//피카츄 초기 체력바 100
+            var src = (Bitmap)Bitmap.FromFile("로고.png");
+
+            // 소스이미지 크기와 동일한 타겟이미지 생성
+            Bitmap tgt = new Bitmap(src.Width, src.Height);
+
+            // 타겟이미지의 Graphics 객체 얻기        
+            using (Graphics g = Graphics.FromImage(tgt))
+            {
+                // 배경색을 설정
+                var rect = new Rectangle(0, 0, tgt.Width, tgt.Height);
+                using (Brush br = new SolidBrush(SystemColors.Control))
+                {
+                    g.FillRectangle(br, 0, 0, tgt.Width, tgt.Height);
+                }
+                // 소스이미지를 원모양으로 잘라 타겟이미지에 출력
+                g.DrawImage(src, 0, 0);
+            }
+            // PictureBox에 이미지 출력
+            pictureBox5.Image = tgt;
         }
         public void Init()//progressbar 맥시멈과 미니멈을 정해주어 넘치지 않도록
         {
@@ -285,8 +304,7 @@ namespace WindowsFormsApplication4
         {
             if (number == 0)
             {
-                State.Text = "크아아아아아";
-                timer1.Enabled = false;
+               
             }
             else if (number == 1)
             {
@@ -309,6 +327,11 @@ namespace WindowsFormsApplication4
                 progressBar2.Step = -10;//거북왕 고속스핀 사용 시 피카츄 체력바 다는 정도
                 progressBar2.PerformStep();
             }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

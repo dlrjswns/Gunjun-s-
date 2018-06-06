@@ -40,15 +40,19 @@
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.State = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(214, 420);
+            this.pictureBox4.Location = new System.Drawing.Point(215, 460);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(94, 116);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -58,7 +62,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(241, 331);
+            this.pictureBox3.Location = new System.Drawing.Point(242, 371);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(67, 74);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -67,7 +71,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(314, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(315, 52);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(362, 307);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,7 +81,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 52);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(296, 207);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -87,52 +91,60 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(176, 225);
+            this.button3.BackColor = System.Drawing.Color.Lime;
+            this.button3.Font = new System.Drawing.Font("HY수평선B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button3.Location = new System.Drawing.Point(212, 265);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(97, 94);
             this.button3.TabIndex = 17;
             this.button3.Text = "백만볼트";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(95, 225);
+            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button2.Font = new System.Drawing.Font("HY수평선B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button2.Location = new System.Drawing.Point(111, 265);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(95, 94);
             this.button2.TabIndex = 16;
             this.button2.Text = "전광석화";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 225);
+            this.button1.BackColor = System.Drawing.Color.Crimson;
+            this.button1.Font = new System.Drawing.Font("HY수평선B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.button1.Location = new System.Drawing.Point(12, 265);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 23);
+            this.button1.Size = new System.Drawing.Size(95, 94);
             this.button1.TabIndex = 15;
             this.button1.Text = "아이언 테일";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(314, 471);
+            this.progressBar1.Location = new System.Drawing.Point(315, 511);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(362, 23);
             this.progressBar1.TabIndex = 18;
             // 
             // progressBar2
             // 
-            this.progressBar2.Location = new System.Drawing.Point(314, 356);
+            this.progressBar2.Location = new System.Drawing.Point(315, 396);
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(362, 23);
             this.progressBar2.TabIndex = 19;
             // 
             // State
             // 
+            this.State.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.State.Font = new System.Drawing.Font("휴먼엑스포", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.State.Location = new System.Drawing.Point(11, 520);
+            this.State.Location = new System.Drawing.Point(9, 596);
             this.State.Name = "State";
             this.State.Size = new System.Drawing.Size(665, 120);
             this.State.TabIndex = 22;
@@ -145,11 +157,31 @@
             this.timer1.Interval = 3500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(687, 35);
+            this.panel1.TabIndex = 23;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(44, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(144, 32);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 24;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 649);
+            this.ClientSize = new System.Drawing.Size(684, 729);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.State);
             this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.progressBar1);
@@ -160,12 +192,15 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form7";
             this.Text = "Form7";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,5 +218,7 @@
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Label State;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
