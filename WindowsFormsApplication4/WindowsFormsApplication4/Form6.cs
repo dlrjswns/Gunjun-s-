@@ -41,6 +41,26 @@ namespace WindowsFormsApplication4
             }
             // PictureBox에 이미지 출력
             pictureBox5.Image = tgt;
+
+            var src1 = (Bitmap)Bitmap.FromFile("뒤로가기1.png");
+
+            // 소스이미지 크기와 동일한 타겟이미지 생성
+            Bitmap tgt1 = new Bitmap(src1.Width, src1.Height);
+
+            // 타겟이미지의 Graphics 객체 얻기        
+            using (Graphics g = Graphics.FromImage(tgt1))
+            {
+                // 배경색을 설정
+                var rect = new Rectangle(0, 0, tgt1.Width, tgt1.Height);
+                using (Brush br = new SolidBrush(SystemColors.Control))
+                {
+                    g.FillRectangle(br, 0, 0, tgt1.Width, tgt1.Height);
+                }
+                // 소스이미지를 원모양으로 잘라 타겟이미지에 출력
+                g.DrawImage(src1, 0, 0);
+            }
+            // PictureBox에 이미지 출력
+            pictureBox6.Image = tgt1;
         }
         public void Init()//progressbar 맥시멈과 미니멈을 정해주어 넘치지 않도록
         {
@@ -293,7 +313,7 @@ namespace WindowsFormsApplication4
 
 
         }
-
+        int time = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (number == 0)
@@ -323,13 +343,26 @@ namespace WindowsFormsApplication4
             }
             if (progressBar1.Value == 0)
             {
+                timer1.Enabled = true;
+                time++;
                 State.Text = "야생의 리자몽이 쓰러졌습니다!!";
+                if (time == 2)
+                {
+                    timer1.Enabled = false;
+                    this.Close();
+                }
             }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Form6 form6 = new Form6();
+            this.Close();
         }
     }
 }

@@ -41,14 +41,16 @@
             this.State = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -160,12 +162,21 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(684, 33);
             this.panel1.TabIndex = 22;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.WindowText;
+            this.panel2.Location = new System.Drawing.Point(3, 38);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(308, 100);
+            this.panel2.TabIndex = 23;
             // 
             // pictureBox5
             // 
@@ -176,13 +187,16 @@
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
             // 
-            // panel2
+            // pictureBox6
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.WindowText;
-            this.panel2.Location = new System.Drawing.Point(3, 38);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(308, 100);
-            this.panel2.TabIndex = 23;
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.WindowText;
+            this.pictureBox6.Location = new System.Drawing.Point(625, 0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(55, 33);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 23;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // Form2
             // 
@@ -209,6 +223,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -228,5 +243,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

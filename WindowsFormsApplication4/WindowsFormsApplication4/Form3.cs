@@ -40,6 +40,26 @@ namespace WindowsFormsApplication4
             }
             // PictureBox에 이미지 출력
             pictureBox2.Image = tgt;
+
+            var src1 = (Bitmap)Bitmap.FromFile("뒤로가기1.png");
+
+            // 소스이미지 크기와 동일한 타겟이미지 생성
+            Bitmap tgt1 = new Bitmap(src1.Width, src1.Height);
+
+            // 타겟이미지의 Graphics 객체 얻기        
+            using (Graphics g = Graphics.FromImage(tgt1))
+            {
+                // 배경색을 설정
+                var rect = new Rectangle(0, 0, tgt1.Width, tgt1.Height);
+                using (Brush br = new SolidBrush(SystemColors.Control))
+                {
+                    g.FillRectangle(br, 0, 0, tgt1.Width, tgt1.Height);
+                }
+                // 소스이미지를 원모양으로 잘라 타겟이미지에 출력
+                g.DrawImage(src1, 0, 0);
+            }
+            // PictureBox에 이미지 출력
+            pictureBox6.Image = tgt1;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -79,7 +99,16 @@ namespace WindowsFormsApplication4
         {
             skyscreen.ShowDialog();
         }
-       
 
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            this.Close();
+        }
     }
 }

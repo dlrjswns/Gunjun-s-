@@ -17,7 +17,7 @@ namespace WindowsFormsApplication4
         int EatCount = 0;
         int SleepCount = 0;
         int PlayCount = 0;
-
+       
         Form2 HuntScreen = new Form2();
         Form3 where = new Form3();
         public Form1()
@@ -43,6 +43,26 @@ namespace WindowsFormsApplication4
             }
             // PictureBox에 이미지 출력
             pictureBox2.Image = tgt;
+
+            var src1 = (Bitmap)Bitmap.FromFile("종료.png");
+
+            // 소스이미지 크기와 동일한 타겟이미지 생성
+            Bitmap tgt1 = new Bitmap(src1.Width, src1.Height);
+
+            // 타겟이미지의 Graphics 객체 얻기        
+            using (Graphics g = Graphics.FromImage(tgt1))
+            {
+                // 배경색을 설정
+                var rect = new Rectangle(0, 0, tgt1.Width, tgt1.Height);
+                using (Brush br = new SolidBrush(SystemColors.Control))
+                {
+                    g.FillRectangle(br, 0, 0, tgt1.Width, tgt1.Height);
+                }
+                // 소스이미지를 원모양으로 잘라 타겟이미지에 출력
+                g.DrawImage(src1, 0, 0);
+            }
+            // PictureBox에 이미지 출력
+            pictureBox3.Image = tgt1;
 
         }
 
@@ -244,7 +264,6 @@ namespace WindowsFormsApplication4
 
         private void Hunt_Click(object sender, EventArgs e)
         {
-
             where.ShowDialog();
         }
 
@@ -261,6 +280,12 @@ namespace WindowsFormsApplication4
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            this.Close();
         }
     }
 }
