@@ -208,6 +208,8 @@ namespace WindowsFormsApplication4
         
         }
 
+
+
         private void Play_Click(object sender, EventArgs e)
         {
             State.Text = "주인님은 이런 놀이를 좋아하시는군요 ??";

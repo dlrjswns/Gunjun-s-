@@ -37,6 +37,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -70,6 +71,7 @@
             // State
             // 
             this.State.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.State.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.State.Location = new System.Drawing.Point(12, 42);
             this.State.Name = "State";
             this.State.Size = new System.Drawing.Size(260, 228);
@@ -82,7 +84,7 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(278, 42);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(220, 223);
+            this.pictureBox1.Size = new System.Drawing.Size(220, 228);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -104,7 +106,7 @@
             // 
             this.Hunt.BackColor = System.Drawing.SystemColors.Menu;
             this.Hunt.Font = new System.Drawing.Font("HY수평선B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Hunt.Location = new System.Drawing.Point(278, 271);
+            this.Hunt.Location = new System.Drawing.Point(278, 276);
             this.Hunt.Name = "Hunt";
             this.Hunt.Size = new System.Drawing.Size(220, 28);
             this.Hunt.TabIndex = 6;
@@ -143,12 +145,23 @@
             this.panel1.Size = new System.Drawing.Size(511, 35);
             this.panel1.TabIndex = 7;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(278, 333);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(220, 23);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Made By SexyJun";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(510, 368);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Hunt);
             this.Controls.Add(this.Sleep);
@@ -178,6 +191,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

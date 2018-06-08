@@ -20,7 +20,7 @@ namespace WindowsFormsApplication4
         int skillcount1 = 0;
         int skillcount2 = 0;
         int skillcount3 = 0;
-        Form3 form3 = new Form3();
+     
         public Form2()
         {
             InitializeComponent();
@@ -66,6 +66,7 @@ namespace WindowsFormsApplication4
             // PictureBox에 이미지 출력
             pictureBox6.Image = tgt1;
 
+          
 
         }
         public void Init()//progressbar 맥시멈과 미니멈을 정해주어 넘치지 않도록

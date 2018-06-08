@@ -60,6 +60,26 @@ namespace WindowsFormsApplication4
             }
             // PictureBox에 이미지 출력
             pictureBox6.Image = tgt1;
+
+            var src2 = (Bitmap)Bitmap.FromFile("지도.jpg");
+
+            // 소스이미지 크기와 동일한 타겟이미지 생성
+            Bitmap tgt2 = new Bitmap(src2.Width, src2.Height);
+
+            // 타겟이미지의 Graphics 객체 얻기        
+            using (Graphics g = Graphics.FromImage(tgt2))
+            {
+                // 배경색을 설정
+                var rect = new Rectangle(0, 0, tgt2.Width, tgt2.Height);
+                using (Brush br = new SolidBrush(SystemColors.Control))
+                {
+                    g.FillRectangle(br, 0, 0, tgt2.Width, tgt2.Height);
+                }
+                // 소스이미지를 원모양으로 잘라 타겟이미지에 출력
+                g.DrawImage(src2, 0, 0);
+            }
+            // PictureBox에 이미지 출력
+            pictureBox1.Image = tgt2;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -109,6 +129,11 @@ namespace WindowsFormsApplication4
         {
             Form3 form3 = new Form3();
             this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
