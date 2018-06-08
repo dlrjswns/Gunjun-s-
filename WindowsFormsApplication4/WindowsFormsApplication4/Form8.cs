@@ -402,8 +402,9 @@ namespace WindowsFormsApplication4
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Form8 form8 = new Form8();
-            this.Close();
+            Visible = false;
+            Form3 form3 = new Form3();
+            form3.ShowDialog();
         }
     }
 }

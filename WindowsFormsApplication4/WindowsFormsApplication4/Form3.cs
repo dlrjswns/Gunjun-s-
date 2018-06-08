@@ -90,6 +90,7 @@ namespace WindowsFormsApplication4
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Visible = false;
             HuntScreen.ShowDialog();
             
           
@@ -97,26 +98,31 @@ namespace WindowsFormsApplication4
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Visible = false;
             waterscreen.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Visible = false;
             glassscreen.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Visible = false;
             cloudscreen.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            Visible = false;
             firescreen.ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            Visible = false;
             skyscreen.ShowDialog();
         }
 
@@ -127,8 +133,9 @@ namespace WindowsFormsApplication4
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            this.Close();
+            Visible = false;
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

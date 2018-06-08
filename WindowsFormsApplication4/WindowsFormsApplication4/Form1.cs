@@ -20,6 +20,7 @@ namespace WindowsFormsApplication4
        
         Form2 HuntScreen = new Form2();
         Form3 where = new Form3();
+        Form9 form9 = new Form9();
         public Form1()
         {
             InitializeComponent();
@@ -266,6 +267,8 @@ namespace WindowsFormsApplication4
 
         private void Hunt_Click(object sender, EventArgs e)
         {
+            Visible = false;
+           
             where.ShowDialog();
         }
 
@@ -286,8 +289,9 @@ namespace WindowsFormsApplication4
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            this.Close();
+         
+
+            Application.Exit();   //모든 윈폼 종료      
         }
     }
 }
