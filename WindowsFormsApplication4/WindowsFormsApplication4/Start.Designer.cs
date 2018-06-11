@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication4
 {
-    partial class Form9
+    partial class Start
     {
         /// <summary>
         /// Required designer variable.

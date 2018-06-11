@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication4
 {
-    partial class Form3
+    partial class Hunt
     {
         /// <summary>
         /// Required designer variable.

@@ -10,17 +10,18 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication4
 {
-    public partial class Form5 : Form
+    
+    public partial class Fire : Form
     {
         int number = 0;
         int skillcount1 = 0;
         int skillcount2 = 0;
         int skillcount3 = 0;
-        public Form5()
+        public Fire()
         {
             InitializeComponent();
-            progressBar1.Value = 100;//초기 이상해씨 체력바 100
-            progressBar2.Value = 100;//초기 피카츄 체력바 100
+            progressBar1.Value = 100;
+            progressBar2.Value = 100;
             var src = (Bitmap)Bitmap.FromFile("로고.png");
 
             // 소스이미지 크기와 동일한 타겟이미지 생성
@@ -66,7 +67,7 @@ namespace WindowsFormsApplication4
             progressBar1.Style = ProgressBarStyle.Continuous;
             progressBar1.Minimum = 0;
             progressBar1.Maximum = 100;
-           
+            
             progressBar1.Value = 0;
 
         }
@@ -82,50 +83,48 @@ namespace WindowsFormsApplication4
         Bitmap bit9;
         protected override void OnLoad(EventArgs e)
         {
-            bit = new Bitmap("glass1.gif");//"glass1.gif" gif 저장
+            bit = new Bitmap("리자몽 1.gif");
             ImageAnimator.Animate(bit, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit1 = new Bitmap("chu13.gif");//"chu13.gif" gif 저장
+            bit1 = new Bitmap("chu13.gif");
             ImageAnimator.Animate(bit1, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit2 = new Bitmap("glass.gif");//"glass.gif" gif 저장
+            bit2 = new Bitmap("리자몽.gif");
             ImageAnimator.Animate(bit2, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit3 = new Bitmap("chu1.gif");//"chu1.gif" gif 저장
+            bit3 = new Bitmap("chu1.gif");
             ImageAnimator.Animate(bit3, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit4 = new Bitmap("chu5.gif");//"chu5.gif" gif 저장
+            bit4 = new Bitmap("chu5.gif");
             ImageAnimator.Animate(bit4, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit5 = new Bitmap("chu3.gif");//"chu3.gif" gif 저장
+            bit5 = new Bitmap("chu3.gif");
             ImageAnimator.Animate(bit5, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit6 = new Bitmap("chu4.gif");//"chu4.gif" gif 저장
+            bit6 = new Bitmap("chu4.gif");
             ImageAnimator.Animate(bit6, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit7 = new Bitmap("솔라빔.gif");//"솔라빔.gif" gif 저장
+            bit7 = new Bitmap("에어 슬래시.gif");
             ImageAnimator.Animate(bit7, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit8 = new Bitmap("잎날가르기.gif");//"잎날가르기.gif" gif 저장
+            bit8 = new Bitmap("화염방사.gif");
             ImageAnimator.Animate(bit8, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
 
-            bit9 = new Bitmap("이판사판.gif");//"이판사판.gif" gif 저장
+            bit9 = new Bitmap("화염소용돌이.gif");
             ImageAnimator.Animate(bit9, new EventHandler(this.OnFrameChanged));
             base.OnLoad(e);
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-            
-
             ImageAnimator.UpdateFrames();
             Graphics h = pictureBox3.CreateGraphics();//초기 picturebox3에 뜨는 gif
             h.DrawImage(this.bit1, new Point(15, 10));
@@ -133,7 +132,7 @@ namespace WindowsFormsApplication4
 
             ImageAnimator.UpdateFrames();
             Graphics t = pictureBox4.CreateGraphics();//초기 picturebox4에 뜨는 gif
-            t.DrawImage(this.bit2, new Point(0, 0));
+            t.DrawImage(this.bit2, new Point(-10, -20));
             base.OnPaint(e);
 
             Graphics y = pictureBox1.CreateGraphics();
@@ -145,59 +144,57 @@ namespace WindowsFormsApplication4
             }
             else if (number == 1)
             {
-              
-                
                 ImageAnimator.UpdateFrames();
-                y.DrawImage(this.bit4, new Point(-50, 0));//피카츄 아이언테일 사용시 picturebox1에 뜨는 gif
+                y.DrawImage(this.bit4, new Point(-50, 0));//피카츄 아이언테일 사용 시 picturebox1에 뜨는 gif
                 base.OnPaint(e);
             }
             else if (number == 2)
             {
                 ImageAnimator.UpdateFrames();
-                y.DrawImage(this.bit5, new Point(-70, 0));//피카츄 전광석화 사용시 picturebox1에 뜨는 gif
+                y.DrawImage(this.bit5, new Point(-70, 0));//피카츄 전광석화 사용 시 picturebox1에 뜨는 gif
                 base.OnPaint(e);
             }
             else
             {
                 ImageAnimator.UpdateFrames();
-                y.DrawImage(this.bit6, new Point(-70, 0));//피카츄 백만볼트 사용시 picturebox1에 뜨는 gif
+                y.DrawImage(this.bit6, new Point(-70, 0));//피카츄 백만볼트 사용 시 picturebox1에 뜨는 gif
                 base.OnPaint(e);
             }
             Graphics g = pictureBox2.CreateGraphics();
-            if (number == 0)
-            {
-                ImageAnimator.UpdateFrames();
-                g.DrawImage(this.bit, new Point(-100, 0));//초기 picturebox2에 뜨는 gif
-                base.OnPaint(e);
-            }
+            if (number == 0) { 
+            ImageAnimator.UpdateFrames();
+            g.DrawImage(this.bit, new Point(0, 0));//초기 picturebox2에 뜨는 gif
+            base.OnPaint(e);
+        }
             else if (number == 1)
             {
-
-
                 ImageAnimator.UpdateFrames();
-                g.DrawImage(this.bit7, new Point(0, 0));//피카츄 아이언테일 사용시 picturebox2에 뜨는 gif
+                g.DrawImage(this.bit7, new Point(0, 0));//피카츄 아이언테일 사용 시 pciturebox2에 뜨는 gif
                 base.OnPaint(e);
             }
             else if (number == 2)
             {
                 ImageAnimator.UpdateFrames();
-                g.DrawImage(this.bit8, new Point(0, 0));//피카츄 전광석화 사용시 picturebox2에 뜨는 gif
+                g.DrawImage(this.bit8, new Point(0, 0));//피카츄 전광석화 사용 시 pciturebox2에 뜨는 gif
                 base.OnPaint(e);
             }
             else
             {
                 ImageAnimator.UpdateFrames();
-                g.DrawImage(this.bit9, new Point(0, 0));//피카츄 백만볼트 사용시 picturebox2에 뜨는 gif
+                g.DrawImage(this.bit9, new Point(0, 0));//피카츄 백만볼트 사용 시 pciturebox2에 뜨는 gif
                 base.OnPaint(e);
             }
-
         }
         private void OnFrameChanged(object sender, EventArgs e)
         {
             this.Invalidate();
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
@@ -209,31 +206,31 @@ namespace WindowsFormsApplication4
             skillcount3 = 0;
             button2.Enabled = true;
             button3.Enabled = true;
-            timer1.Enabled = true;//이상해씨 스킬 사용시 타이머 불작동 방지
+            timer1.Enabled = true;//리자몽 스킬 사용 시 타이머 불작동 방지
 
             if (skillcount1 == 0)
             {
                 State.Text = "피카츄 아이언테일 !!... 효과가 굉장했다 !";
-                progressBar1.Step = -10;//이상해씨 체력바 다는 정도
+                progressBar1.Step = -10;//피카츄 아이언테일 사용 시 리자몽 체력바 다는 정도 
                 progressBar1.PerformStep();
             }
             else if (skillcount1 == 1)
             {
                 State.Text = "피카츄 아이언테일 !!... 효과가 굉장했다 !";
-                progressBar1.Step = -10;//이상해씨 체력바 다는 정도
+                progressBar1.Step = -10;//피카츄 아이언테일 사용 시 리자몽 체력바 다는 정도 
                 progressBar1.PerformStep();
             }
             else if (skillcount1 == 2)
             {
                 State.Text = "피카츄 아이언테일 !!... 효과가 별로였다 ,,,";
-                progressBar1.Step = -5;//이상해씨 체력바 다는 정도
+                progressBar1.Step = -5;//피카츄 아이언테일 사용 시 리자몽 체력바 다는 정도 
                 progressBar1.PerformStep();
 
             }
             else
             {
                 State.Text = "피카츄 아이언테일 !!... 효과가 별로였다 ,,,";
-                progressBar1.Step = -5;//이상해씨 체력바 다는 정도
+                progressBar1.Step = -5;//피카츄 아이언테일 사용 시 리자몽 체력바 다는 정도 
                 progressBar1.PerformStep();
                 button1.Enabled = false;
             }
@@ -253,32 +250,32 @@ namespace WindowsFormsApplication4
             if (skillcount2 == 0)
             {
                 State.Text = "피카츄 전광석화 !!... 효과가 굉장했다 !";
-                progressBar1.Step = -10;//이상해씨 체력바 다는 정도
+                progressBar1.Step = -10;//피카츄 전광석화 사용 시 리자몽 체력바 다는 정도 
                 progressBar1.PerformStep();
             }
             else if (skillcount2 == 1)
             {
                 State.Text = "피카츄 전광석화 !!... 효과가 별로였다 ,,,";
-                progressBar1.Step = -5;//이상해씨 체력바 다는 정도
+                progressBar1.Step = -5;//피카츄 전광석화 사용 시 리자몽 체력바 다는 정도 
                 progressBar1.PerformStep();
             }
             else if (skillcount2 == 2)
             {
                 State.Text = "피카츄 전광석화 !!... 효과가 별로였다 ,,,";
-                progressBar1.Step = -5;//이상해씨 체력바 다는 정도
+                progressBar1.Step = -5;//피카츄 전광석화 사용 시 리자몽 체력바 다는 정도 
                 progressBar1.PerformStep();
 
             }
             else if (skillcount2 == 3)
             {
                 State.Text = "피카츄 전광석화 !!... 효과가 별로였다 ,,,";
-                progressBar1.Step = -5;//이상해씨 체력바 다는 정도
+                progressBar1.Step = -5;//피카츄 전광석화 사용 시 리자몽 체력바 다는 정도 
                 progressBar1.PerformStep();
             }
             else
             {
                 State.Text = "피카츄 전광석화 !!... 효과가 별로였다 ,,,";
-                progressBar1.Step = -5;//이상해씨 체력바 다는 정도
+                progressBar1.Step = -5;//피카츄 전광석화 사용 시 리자몽 체력바 다는 정도 
                 progressBar1.PerformStep();
                 button2.Enabled = false;
             }
@@ -297,13 +294,13 @@ namespace WindowsFormsApplication4
             if (skillcount3 == 0)
             {
                 State.Text = "피카츄 백만볼트 !!... 효과가 굉장했다 !";
-                progressBar1.Step = -20;//이상해씨 체력바 다는 정도
+                progressBar1.Step = -20;//피카츄 백만볼트 사용 시 리자몽 체력바 다는 정도 
                 progressBar1.PerformStep();
             }
             else if (skillcount3 == 1)
             {
                 State.Text = "피카츄 백만볼트 !!... 효과가 별로였다 ,,,";
-                progressBar1.Step = -10;//이상해씨 체력바 다는 정도
+                progressBar1.Step = -10;//피카츄 백만볼트 사용 시 리자몽 체력바 다는 정도 
                 progressBar1.PerformStep();
             }
             else
@@ -316,11 +313,6 @@ namespace WindowsFormsApplication4
 
 
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
         int time = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -330,30 +322,30 @@ namespace WindowsFormsApplication4
             }
             else if (number == 1)
             {
-                State.Text = "이상해씨가 <솔라빔>를 사용했다!!... ";
+                State.Text = "리자몽이 <에어슬레시>를 사용했다!!... ";
                 timer1.Enabled = false;
-                progressBar2.Step = -10;//이상해씨 솔라빔 사용 시 피카츄 체력바 다는 정도
+                progressBar2.Step = -10;//리자몽 에어슬레시 사용 시 피카츄 체력바 다는 정도
                 progressBar2.PerformStep();
             }
             else if (number == 2)
             {
-                State.Text = "이상해씨가 <잎날가르기>를 사용했다!!...";
+                State.Text = "리자몽이 <화염방사>를 사용했다!!...";
                 timer1.Enabled = false;
-                progressBar2.Step = -10;//이상해씨 잎날가르기 사용 시 피카츄 체력바 다는 정도
+                progressBar2.Step = -10;//리자몽 화염방사 사용 시 피카츄 체력바 다는 정도
                 progressBar2.PerformStep();
             }
             else
             {
-                State.Text = "이상해씨가 <이판사판>을 사용했다!!...";
+                State.Text = "리자몽이 <화염소용돌이>을 사용했다!!...";
                 timer1.Enabled = false;
-                progressBar2.Step = -10;//이상해씨 이판사판 사용 시 피카츄 체력바 다는 정도
+                progressBar2.Step = -10;//리자몽 화염소용돌이 사용 시 피카츄 체력바 다는 정도
                 progressBar2.PerformStep();
             }
             if (progressBar1.Value == 0)
             {
                 timer1.Enabled = true;
                 time++;
-                State.Text = "야생의 이상해씨가 쓰러졌습니다!!";
+                State.Text = "야생의 리자몽이 쓰러졌습니다!!";
                 if (time == 2)
                 {
                     timer1.Enabled = false;
@@ -362,10 +354,15 @@ namespace WindowsFormsApplication4
             }
         }
 
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             Visible = false;
-            Form3 form3 = new Form3();
+            Hunt form3 = new Hunt();
             form3.ShowDialog();
         }
     }

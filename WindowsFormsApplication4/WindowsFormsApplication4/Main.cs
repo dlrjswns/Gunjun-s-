@@ -11,17 +11,17 @@ using System.Threading;
 
 namespace WindowsFormsApplication4
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         Chu chu = new Chu();
         int EatCount = 0;
         int SleepCount = 0;
         int PlayCount = 0;
        
-        Form2 HuntScreen = new Form2();
-        Form3 where = new Form3();
-        Form9 form9 = new Form9();
-        public Form1()
+        Windy HuntScreen = new Windy();
+        Hunt where = new Hunt();
+        Start form9 = new Start();
+        public Main()
         {
             InitializeComponent();
             State.Text = "주인님 뭘 할까요 ??";

@@ -11,9 +11,9 @@ using System.Threading;
 
 namespace WindowsFormsApplication4
 {
-    public partial class Form9 : Form
+    public partial class Start : Form
     {
-        public Form9()
+        public Start()
         {
             InitializeComponent();
             var src1 = (Bitmap)Bitmap.FromFile("포켓몬스터.jpg");
@@ -41,7 +41,7 @@ namespace WindowsFormsApplication4
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            Main form1 = new Main();
            
             progressBar1.Step = 100;
             progressBar1.PerformStep();
@@ -59,8 +59,8 @@ namespace WindowsFormsApplication4
             if (progressBar1.Value == 100)
             {
                 timer1.Enabled = false;
-                Form1 form1 = new Form1();
-                Form9 form9 = new Form9();
+                Main form1 = new Main();
+                Start form9 = new Start();
                 Visible = false;
                 form1.ShowDialog();                          
                 

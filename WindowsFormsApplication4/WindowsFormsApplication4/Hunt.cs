@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication4
 {
-    public partial class Form3 : Form
+    public partial class Hunt : Form
     {
-        Form2 HuntScreen = new Form2();
-        Form4 waterscreen = new Form4();
-        Form5 glassscreen = new Form5();
-        Form6 cloudscreen = new Form6();
-        Form7 skyscreen = new Form7();
-        Form8 firescreen = new Form8();
-        public Form3()
+        Windy HuntScreen = new Windy();
+        Water waterscreen = new Water();
+        Glass glassscreen = new Glass();
+        Fire cloudscreen = new Fire();
+        Cloud skyscreen = new Cloud();
+        Volcano firescreen = new Volcano();
+        public Hunt()
         {
             InitializeComponent();
             var src = (Bitmap)Bitmap.FromFile("로고.png");
@@ -134,7 +134,7 @@ namespace WindowsFormsApplication4
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             Visible = false;
-            Form1 form1 = new Form1();
+            Main form1 = new Main();
             form1.ShowDialog();
         }
 
