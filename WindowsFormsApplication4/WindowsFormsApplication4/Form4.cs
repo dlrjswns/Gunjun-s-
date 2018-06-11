@@ -167,7 +167,7 @@ namespace WindowsFormsApplication4
             if (number == 0)
             {
                 ImageAnimator.UpdateFrames();                
-                x.DrawImage(this.bit3, new Point(-70, 0));//피카츄 대기화면
+                x.DrawImage(this.bit3, new Point(-50, 0));//피카츄 대기화면
                 base.OnPaint(e);
             }
             else if (number == 1)
@@ -179,13 +179,13 @@ namespace WindowsFormsApplication4
             else if (number == 2)
             {
                 ImageAnimator.UpdateFrames();
-                x.DrawImage(this.bit5, new Point(-50, 0));//피카츄 전광석화
+                x.DrawImage(this.bit5, new Point(-70, 0));//피카츄 전광석화
                 base.OnPaint(e);
             }
             else
             {
                 ImageAnimator.UpdateFrames();
-                x.DrawImage(this.bit6, new Point(-50, 0));//피카츄 백만볼트
+                x.DrawImage(this.bit6, new Point(-70, 0));//피카츄 백만볼트
                 base.OnPaint(e);
             }
 

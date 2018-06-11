@@ -156,7 +156,7 @@ namespace WindowsFormsApplication4
             else if(number==1)//피카츄 아이언테일 스킬 쓴 이 후 picturebox1 이미지
             {
                 ImageAnimator.UpdateFrames();
-                y.DrawImage(this.bit4, new Point(0, 0));
+                y.DrawImage(this.bit4, new Point(-50, 0));
                 base.OnPaint(e);
                 
                 
@@ -164,13 +164,13 @@ namespace WindowsFormsApplication4
             else if (number == 2)//피카츄 전광석화 스킬 쓴 이 후 picturebox1 이미지
             {
                 ImageAnimator.UpdateFrames();
-                y.DrawImage(this.bit5, new Point(0, 0));
+                y.DrawImage(this.bit5, new Point(-70, 0));
                 base.OnPaint(e);
             }
             else//피카츄 백만볼트 스킬 쓴 이 후 picturebox1 이미지
             {
                 ImageAnimator.UpdateFrames();
-                y.DrawImage(this.bit6, new Point(0, 0));
+                y.DrawImage(this.bit6, new Point(-70, 0));
                 base.OnPaint(e);
             }
 

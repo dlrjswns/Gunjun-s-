@@ -144,19 +144,19 @@ namespace WindowsFormsApplication4
             else if (number == 1)
             {
                 ImageAnimator.UpdateFrames();
-                y.DrawImage(this.bit4, new Point(0, 0));//피카츄 아이언테일 사용 시 picturebox1에 뜨는 gif
+                y.DrawImage(this.bit4, new Point(-50, 0));//피카츄 아이언테일 사용 시 picturebox1에 뜨는 gif
                 base.OnPaint(e);
             }
             else if (number == 2)
             {
                 ImageAnimator.UpdateFrames();
-                y.DrawImage(this.bit5, new Point(0, 0));//피카츄 전광석화 사용 시 picturebox1에 뜨는 gif
+                y.DrawImage(this.bit5, new Point(-70, 0));//피카츄 전광석화 사용 시 picturebox1에 뜨는 gif
                 base.OnPaint(e);
             }
             else
             {
                 ImageAnimator.UpdateFrames();
-                y.DrawImage(this.bit6, new Point(0, 0));//피카츄 백만볼트 사용 시 picturebox1에 뜨는 gif
+                y.DrawImage(this.bit6, new Point(-70, 0));//피카츄 백만볼트 사용 시 picturebox1에 뜨는 gif
                 base.OnPaint(e);
             }
             Graphics g = pictureBox2.CreateGraphics();

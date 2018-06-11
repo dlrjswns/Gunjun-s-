@@ -95,12 +95,13 @@ namespace WindowsFormsApplication4
             }
             // PictureBox에 이미지 출력
             pictureBox1.Image = tgt;
-            
 
+            Play.Enabled = true;
+            Sleep.Enabled = true;
             State.Text = "냠냠 맛있쪙~♥";
-            EatCount++;
-            PlayCount = 0;
-            SleepCount = 0;
+            EatCount++;//Eat버튼 누를때마다 eatcount 증가
+            PlayCount = 0;//Eat버튼 누르면 playcount 초기화
+            SleepCount = 0;//Eat버튼 누르면 sleepcount 초기화
 
             if (EatCount > 3)
             {
@@ -136,8 +137,8 @@ namespace WindowsFormsApplication4
         {
             SleepCount++;
             State.Text = "주인.....ㄴㅣㅁzzzzZZZZZZZ";
-
-            
+            Play.Enabled = true;
+            Eat.Enabled = true;
 
             //if (SleepCount >= 1)
             //    State.Text = "피카츄는 이미 자고 있는 중 입니다 !!";// 피카츄 sleep눌렀을때 출력하게 하고 싶음
@@ -203,7 +204,9 @@ namespace WindowsFormsApplication4
                 pictureBox1.Image = tgt2;
 
                 chu.Eat();
-                Eat.Enabled = false;
+                Sleep.Enabled = false;
+               
+
             }
 
         
@@ -215,7 +218,9 @@ namespace WindowsFormsApplication4
         {
             State.Text = "주인님은 이런 놀이를 좋아하시는군요 ??";
             PlayCount++;
-            Eat.Enabled = true;
+            Eat.Enabled = true;//play버튼을 눌렀을때 false되있는 다른 버튼의 enabled를 true로
+            Sleep.Enabled = true;//play버튼을 눌렀을때 false되있는 다른 버튼의 enabled를 true로
+
 
             var src1 = (Bitmap)Bitmap.FromFile("PLAY.jpg");
 
@@ -240,6 +245,7 @@ namespace WindowsFormsApplication4
             if (PlayCount > 3)
             {
                 State.Text = "주인님 이제 이건 재미없어요.. 색다른거 없나요...♥";
+                Play.Enabled = false;
                 var src3 = (Bitmap)Bitmap.FromFile("noplay.jpg");
 
                 // 소스이미지 크기와 동일한 타겟이미지 생성
@@ -267,9 +273,9 @@ namespace WindowsFormsApplication4
 
         private void Hunt_Click(object sender, EventArgs e)
         {
-            Visible = false;
+            Visible = false;//사냥하기 버튼을 누를때 form1화면을 가려준다
            
-            where.ShowDialog();
+            where.ShowDialog();//where폼을 보여준다
         }
 
         private void chu3D_Click(object sender, EventArgs e)
