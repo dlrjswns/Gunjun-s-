@@ -198,7 +198,7 @@
             this.label1.Text = "Made By SexyJun";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // Form8
+            // Volcano
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -216,8 +216,9 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form8";
+            this.Name = "Volcano";
             this.Text = "Form8";
+            this.Load += new System.EventHandler(this.Volcano_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

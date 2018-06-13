@@ -411,10 +411,12 @@ namespace WindowsFormsApplication4
                 if (time == 2)
                 {
                     timer1.Enabled = false;
-                    this.Close();
+                    Visible = false;
+                    Main form1 = new Main();
+                    form1.ShowDialog();
 
-                    
-                   
+
+
                 }
                
 
@@ -433,6 +435,11 @@ namespace WindowsFormsApplication4
             Hunt form3 = new Hunt();
             form3.ShowDialog();
           
+        }
+
+        private void Windy_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

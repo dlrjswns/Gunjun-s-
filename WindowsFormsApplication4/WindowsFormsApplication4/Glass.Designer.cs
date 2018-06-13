@@ -198,7 +198,7 @@
             this.label1.Text = "Made By SexyJun";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // Form5
+            // Glass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -216,8 +216,9 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form5";
+            this.Name = "Glass";
             this.Text = "Form5";
+            this.Load += new System.EventHandler(this.Glass_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

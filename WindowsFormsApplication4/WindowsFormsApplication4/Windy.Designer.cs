@@ -208,7 +208,7 @@
             this.label1.Text = "Made By SexyJun";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // Form2
+            // Windy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -226,8 +226,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form2";
+            this.Name = "Windy";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Windy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
