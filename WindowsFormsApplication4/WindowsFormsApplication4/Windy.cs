@@ -401,7 +401,7 @@ namespace WindowsFormsApplication4
                 progressBar2.PerformStep();
                 timer1.Enabled = false;
             }
-            if (progressBar1.Value == 0)
+            if (progressBar1.Value == 0 || progressBar2.Value == 0)
             {
                 timer1.Enabled = true;
                 time++;
@@ -438,6 +438,11 @@ namespace WindowsFormsApplication4
         }
 
         private void Windy_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
         }
